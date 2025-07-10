@@ -1,0 +1,26 @@
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 3px; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    bottom: 0; 
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%; 
+}
+
+.active::after {
+    width: 100%;
+}
